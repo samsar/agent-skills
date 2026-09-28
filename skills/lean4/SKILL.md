@@ -9,8 +9,9 @@ description: >
   pricing, billing, tax or money math, rounding and allocation (splitting amounts, proration),
   parsers and serializers (round-trip), state-transition rules, scheduling or ranking
   algorithms, and data-structure invariants. Works on existing code in any language (port the
-  core to Lean) or for new logic. Not for concurrency between actors (use tla-plus), I/O-heavy
-  glue, CRUD, or UI — and not "lean" in the lean-startup / lean-manufacturing sense.
+  core to Lean) or for new logic. Not for concurrency between actors (use tla-plus), hunting
+  crashes on malformed input (use fuzzing), I/O-heavy glue, CRUD, or UI — and not "lean" in
+  the lean-startup / lean-manufacturing sense.
 allowed-tools: Bash Read Write Edit Grep Glob
 ---
 
@@ -32,6 +33,8 @@ state-transition rules.
 Poor fit, so say so briefly and redirect:
 - Several actors with interleaving, retries or crashes: use the **tla-plus** skill. That's a
   design problem, not a pure-function problem.
+- Finding crashes, hangs or memory bugs on malformed input to a parser or decoder: use the
+  **fuzzing** skill.
 - Large surface area, I/O, CRUD, UI: use tests. Property-based tests get much of the value
   for a fraction of the effort.
 - Proofs cost far more than tests. If the logic is simple and a bug would be cheap and
