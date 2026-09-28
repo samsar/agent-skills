@@ -7,6 +7,7 @@ Codex, Cursor, Gemini CLI, Copilot and other skills-compatible agents load on de
 |---|---|
 | [`tla-plus`](skills/tla-plus/SKILL.md) | Model a concurrent or distributed design in TLA+/PlusCal and check it exhaustively with TLC, spec-first or from existing code. |
 | [`lean4`](skills/lean4/SKILL.md) | Prove small, critical pure logic correct in Lean 4, then differential-test the production code against the proven model. |
+| [`fuzzing`](skills/fuzzing/SKILL.md) | Coverage-guided fuzzing of code that handles untrusted input: harness, oracle, seeds, run, then triage, minimize and lock in each crash as a regression test. |
 
 ## Install
 
